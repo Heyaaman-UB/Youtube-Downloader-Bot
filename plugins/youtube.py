@@ -31,7 +31,7 @@ async def ytdl(_, message):
                                      timedelta(minutes=youtube_next_fetch)
 
     except Exception:
-        await message.reply_text("`ғᴀɪʟᴇᴅ ᴛᴏ ғᴇᴛᴄʜ ʏᴏᴜᴛᴜʙᴇ ᴅᴀᴛᴀ... \nᴘᴏssɪʙʟᴇ ʏᴏᴜᴛᴜʙᴇ ʙʟᴏᴄᴋᴇᴅ sᴇʀᴠᴇʀ ɪᴘ \n#error`")
+        await message.reply_text("`Failed To Fetch Youtube Data... \nPossible Youtube Blocked server ip \n#error`")
         return
     buttons = InlineKeyboardMarkup(list(create_buttons(formats)))
     sentm = await message.reply_text("Processing Youtube Url 🔎 🔎 🔎")
@@ -55,4 +55,3 @@ async def ytdl(_, message):
         except Exception as e:
             await sentm.edit(
             f"<code>{e}</code> #Error")
-
